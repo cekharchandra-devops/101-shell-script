@@ -9,7 +9,7 @@ N="\e[0m"
 
 validate_root_user() {
     if [ $1 -ne 0 ]; then
-        echo -e "$R You are not the root user $N"
+        echo -e "$R Run the script with root previledges $N"
         exit 1
     fi
 }
