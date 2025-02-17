@@ -32,7 +32,7 @@ if [ -z $NAME ]; then
 elif [ -n $NAME ]; then
 	if [ $NAME == 'sekhar' ]; then
 		echo "you are sekhar!"
-	elif [$NAME != 'sekhar' ]; then
+	elif [ $NAME != 'sekhar' ]; then
 		echo "you are not sekhar"
 	fi
 
