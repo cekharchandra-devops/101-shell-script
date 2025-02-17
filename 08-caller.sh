@@ -2,7 +2,7 @@
 
 logDir="/var/log/hostname"
 
-export logDir
+export logDir # Exporting the variable to make it available in the called script
 
 chmod +x 09-calling.sh
 
