@@ -19,3 +19,16 @@ else
 	   echo " mysql is successfully installed."
 	fi
 fi
+
+dnf list installed git #> /dev/null 2>&1
+
+if [ $? -eq 0 ]; then
+	echo "git is already isntalled and nothing to do"
+else
+	dnf install git -y
+	if [ $? -ne 0 ]; then
+	   echo "git is not installed. please check"
+	else
+	   echo " git is successfully installed."
+	fi
+fi
