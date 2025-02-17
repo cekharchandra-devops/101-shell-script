@@ -9,7 +9,7 @@ N="\e[0m"
 
 validate_root_user() {
     if [ $1 -ne 0 ]; then
-        echo "You are not the root user"
+        echo "$R You are not the root user$N"
         exit 1
     fi
 }
