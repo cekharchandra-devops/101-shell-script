@@ -5,11 +5,13 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+B="\e[34m"
+b="\e[1m"
 
 
 validate_root_user() {
     if [ $1 -ne 0 ]; then
-        echo -e "$R Run the script with root previledges $N"
+        echo -e "$R $b Run the script with root previledges $N"
         exit 1
     fi
 }
