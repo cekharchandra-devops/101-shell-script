@@ -7,3 +7,13 @@ if [ $NUM1 -gt 10 ]; then
 else
     echo "Number is less than 10"
 fi
+
+# multiple condidtions
+
+if [ $NUM1 -gt 0 ]; then
+    echo " $NUM1 is positive"
+elif [ $NUM1 -lt 0 ]; then
+	echo "$NUM1 is negative"
+elif [ $NUM1 -eq 0 ]; then
+	echo "$NUM1 is zero"
+fi
