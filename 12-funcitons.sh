@@ -9,7 +9,7 @@ N="\e[0m"
 
 validate_root_user() {
     if [ $1 -ne 0 ]; then
-        echo "$R You are not the root user$N"
+        echo -e "$R You are not the root user $N"
         exit 1
     fi
 }
@@ -18,13 +18,13 @@ validateAndInstall() {
     dnf list installed $1 #> /dev/null 2>&1
 
     if [ $? -eq 0 ]; then
-        echo "$1 is already isntalled and nothing to do"
+        echo -e "$1 is already isntalled and nothing to do"
     else
         dnf install $1 -y
         if [ $? -ne 0 ]; then
-           echo "$1 $R is not installed$N. please check"
+           echo -e "$1 $R is not installed$N. please check"
         else
-           echo " $1 is $G successfully installed.$N"
+           echo -e "$1 is $G successfully installed.$N"
         fi
     fi
 }
