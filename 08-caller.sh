@@ -6,4 +6,4 @@ export logDir
 
 chmod +x 09-calling.sh
 
-./08-calling.sh
+./09-calling.sh
