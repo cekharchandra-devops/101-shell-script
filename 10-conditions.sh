@@ -59,3 +59,23 @@ elif [ -w $FILE ]; then
 elif [ -x $FILE ]; then
     echo "File is executable"
 fi
+
+# Logical Operators
+# Operator	Meaning
+#     !	    Not
+#     -a	    And
+#     -o	    Or
+#     ||       Or
+#     &&       And
+
+if [ -e $FILE ] && [ -r $FILE ]; then
+    echo "File exists and is readable"
+fi
+
+if [ -e $FILE ] || [ -r $FILE ]; then
+    echo "File exists or is readable"
+fi
+
+if [ -e $FILE ] && [ -r $FILE ] || [ -w $FILE ]; then
+    echo "File exists and is readable or is writable"
+fi
