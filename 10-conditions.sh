@@ -18,7 +18,7 @@ elif [ $NUM1 -eq 0 ]; then
 	echo "$NUM1 is zero"
 fi
 
-# 3. String Comparison
+#  String Comparison
 # Operator	Meaning
 #     ==	    Equal
 #     !=	    Not Equal
@@ -36,4 +36,26 @@ elif [ -n $NAME ]; then
 		echo "you are not sekhar"
 	fi
 
+fi
+
+
+# File Operators
+# Operator	Checks If...
+#     -e	    File exists (any type)
+#     -f	    Regular file exists (not a directory)
+#     -d	    Directory exists
+#     -r	    File is readable
+#     -w	    File is writable
+#     -x	    File is executable
+
+FILE=$3
+
+if [ -e $FILE ]; then
+    echo "File exists"
+elif [ -r $FILE ]; then
+    echo "File is readable"
+elif [ -w $FILE ]; then
+    echo "File is writable"
+elif [ -x $FILE ]; then
+    echo "File is executable"
 fi
