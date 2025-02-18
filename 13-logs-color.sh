@@ -30,7 +30,7 @@ log_warning() {
 }
 
 log_error() {
-    echo -e "\033[1m;4;31m[ERROR] $1\033[0m"   # Red for errors
+    echo -e "\033[1;4;31m[ERROR] $1\033[0m"   # Red for errors
 }
 
 log_info "System is running smoothly."
