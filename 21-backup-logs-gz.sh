@@ -36,7 +36,7 @@ Files=$(find ${SOURCE_DIR} -name "*.log" -mtime +$NO_OF_DAYS)
 if [ ! -z "$Files" ]; then
     log_info "Files are found"
     TAR_FILE="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
-    tar -czf "$TAR_FILE" -C "$SOURCE_DIR" $(find . -name "*.log" -mtime +$NO_OF_DAYS -exec basename {} \;)
+    tar -czf $TAR_FILE -C $SOURCE_DIR $(find . -name "*.log" -mtime +$NO_OF_DAYS -exec basename {} \;)
 
     if [ -f $TAR_FILE ]; then
         log_info "Successfully compressed files older than $NO_OF_DAYS days into $TAR_FILE"
