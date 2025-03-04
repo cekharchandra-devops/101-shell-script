@@ -35,7 +35,7 @@ fi
 Files=$(find ${SOURCE_DIR} -name "*.log" -mtime +$NO_OF_DAYS)
 if [ ! -z "$Files" ]; then
     log_info "Files are found"
-    TAR_FILE="$DEST_DIR/app-logs-$TIMESTAMP.tar.gz"
+    TAR_FILE=$DEST_DIR/app-logs-$TIMESTAMP.tar.gz
     tar -czf $TAR_FILE -C $SOURCE_DIR $(find . -name "*.log" -mtime +$NO_OF_DAYS -exec basename {} \;)
 
     if [ -f $TAR_FILE ]; then
