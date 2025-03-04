@@ -76,6 +76,6 @@ if [ -e $FILE ] || [ -r $FILE ]; then
     echo "File exists or is readable"
 fi
 
-if [ ! -e $FILE ] && [ -r $FILE ] || [ ! -w $FILE ]; then
-    echo "File exists and is readable or is writable"
+if [[ !(( -f "$FILE" && -r "$FILE") ||  -w "$FILE") ]]; then
+    echo "Condition met"
 fi
