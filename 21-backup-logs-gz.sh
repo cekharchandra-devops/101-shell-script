@@ -2,7 +2,7 @@
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-NO_OF_DAYS=${3:-14}
+NO_OF_DAYS=14
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
 
 log_info() {
